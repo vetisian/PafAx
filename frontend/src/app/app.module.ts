@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { WebcamModule } from 'ngx-webcam'
 
 import { AppComponent } from './app.component';
@@ -22,7 +24,10 @@ const ROUTES: Routes = [
     LoginComponent, MainComponent, CaptureComponent,
   ],
   imports: [
-		BrowserModule, 
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
 		RouterModule.forRoot(ROUTES),
 		WebcamModule,
   ],
